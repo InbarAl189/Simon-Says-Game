@@ -5,6 +5,5 @@
 - Four colored playing buttons.
 - Start button.
 - Current score (the current length of the active sequence). <br>
-(Using Redux for the app's state management).
 
 
