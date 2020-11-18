@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Button, Alert } from 'react-native';
 import Sound from 'react-native-sound';
 
+  
 export default class Game extends Component{ 
+  
   constructor (props){
     super(props);
     this.blink = 0
     this.totalSequenceCounter = 0
-    this.numOfSequences = 10
+    this.numOfSequences = 5
     this.currSequence = [] 
     this.totalSequence=[]
     this.top10HighScores=[]
@@ -34,8 +36,8 @@ export default class Game extends Component{
     this.blinkButtonAnimation = this.blinkButtonAnimation.bind(this)
 
   }
-
-  playGame(){
+  
+  playGame = () => {
     for (var i=0; i<this.numOfSequences; i++) {
       this.totalSequence.push(Math.floor(Math.random()*4)+1);
     }
@@ -77,9 +79,9 @@ export default class Game extends Component{
     this.blink = 0;
 }
    
-  playerTurn(i){
+  playerTurn = (i) => {
     this.numberOfClick++
-    if (this.currSequence[this.numberOfClick]==i){
+    if (this.currSequence[this.numberOfClick] == i) {
       this.blinkButtonAnimation(i)
       if(this.currSequence.length == this.numberOfClick+1){
         if(this.currSequence.length == this.totalSequence.length){
@@ -98,10 +100,10 @@ export default class Game extends Component{
       this.setState({ clickDisable: true })
       let ifScoreExists = this.top10HighScores.includes(this.totalSequenceCounter);
       console.log(ifScoreExists);
-      if (!ifScoreExists) {
-        if (this.top10HighScores.length < 10)
+      if (!ifScoreExists) { // check if high score is already exists in table
+        if (this.top10HighScores.length < 10) // check if top10 array of score is full
         {
-          this.top10HighScores.push(this.totalSequenceCounter); // push to leaders board
+          this.top10HighScores.push(this.totalSequenceCounter); 
           this.top10HighScores.sort();
           this.top10HighScores.reverse();
         }
@@ -120,7 +122,7 @@ export default class Game extends Component{
     }    
   }
 
-  blinkButtonAnimation(i){ 
+  blinkButtonAnimation = (i) => { 
     if (i == 1){
         this.greenBlink();
       }
@@ -135,16 +137,27 @@ export default class Game extends Component{
       }
   }
   
-  greenBlink(){
+  greenBlink = () =>{
     
     setTimeout(() => {
-        this.setState( {
-            greenBtn:{
-              ...this.state.style1, backgroundColor: 'lightgreen'
-            }
-            })
+      this.greenSound = new Sound('green.mp3', Sound.MAIN_BUNDLE, (error) => {
+        if (error) {
+          console.log('failed to load the sound', error);
+          return;
+        }
+      });
+      this.setState({
+        greenBtn: {
+          ...this.state.style1, backgroundColor: 'lightgreen'
+        }
+      });
         }, 200);
-      setTimeout(() => {
+    setTimeout(() => {
+        this.greenSound.play((success) => {
+        if (!success) {
+          console.log('Sound did not play')
+        }
+      });
         this.setState( {
             greenBtn:{
               ...this.state.style1, backgroundColor: 'darkgreen'
@@ -153,15 +166,27 @@ export default class Game extends Component{
         }, 1000);
   } 
 
-  yellowBlink(){
+  yellowBlink = () => {
     setTimeout(() => {
-      this.setState( {
-          yellowBtn:{
-            ...this.state.style1, backgroundColor: 'white'
-          }
-          })
+       this.yellowSound = new Sound('yellow.mp3', Sound.MAIN_BUNDLE, (error) => {
+        if (error) {
+          console.log('failed to load the sound', error);
+          return;
+        }
+      });
+      this.setState({
+        yellowBtn: {
+          ...this.state.style1, backgroundColor: 'white'
+        }
+      });
+     
       }, 200);
     setTimeout(() => {
+       this.yellowSound.play((success) => {
+        if (!success) {
+          console.log('Sound did not play')
+        }
+      });
       this.setState( {
           yellowBtn:{
             ...this.state.style1, backgroundColor: 'yellow'
@@ -170,15 +195,27 @@ export default class Game extends Component{
         }, 1000);
   }
 
-  blueBlink(){
+  blueBlink = () => {
     setTimeout(() => {
-      this.setState( {
-          blueBtn:{
-            ...this.state.style1, backgroundColor: 'lightblue'
-          }
-          })
+      this.blueSound = new Sound('blue.mp3', Sound.MAIN_BUNDLE, (error) => {
+        if (error) {
+          console.log('failed to load the sound', error);
+          return;
+        }
+      });
+      this.setState({
+        blueBtn: {
+          ...this.state.style1, backgroundColor: 'lightblue'
+        }
+      });
+      
       }, 200);
     setTimeout(() => {
+      this.blueSound.play((success) => {
+        if (!success) {
+          console.log('Sound did not play')
+        }
+      });
       this.setState( {
           blueBtn:{
             ...this.state.style1, backgroundColor: 'blue'
@@ -187,15 +224,27 @@ export default class Game extends Component{
         }, 1000);
   }
 
-  redBlink(){
+  redBlink = () => {
     setTimeout(() => {
-      this.setState( {
-          redBtn:{
-            ...this.state.style1, backgroundColor: 'pink'
-          }
-          })
+      this.redSound = new Sound('red.mp3', Sound.MAIN_BUNDLE, (error) => {
+        if (error) {
+          console.log('failed to load the sound', error);
+          return;
+        }
+      });
+      this.setState({
+        redBtn: {
+          ...this.state.style1, backgroundColor: 'pink'
+        }
+      });
+      
       }, 200);
     setTimeout(() => {
+      this.redSound.play((success) => {
+        if (!success) {
+          console.log('Sound did not play')
+        }
+      });
       this.setState( {
           redBtn:{
             ...this.state.style1, backgroundColor: 'red'
@@ -291,7 +340,7 @@ const styles = StyleSheet.create({
     height: 90,
     borderRadius: 20,
     alignSelf: 'center',
-    backgroundColor: '#6602A3',
+    backgroundColor: '#DA6202',
   },
   highScoreBtn: {
     marginTop: 30,

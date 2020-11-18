@@ -26,15 +26,14 @@ export default class HighScores extends Component { //leaders screen component
 
   displayScores(scores) { 
     let scoresToDisplay = [];
-
     for (var i = 0; i < scores.length; i++) {
-      scoresToDisplay.push(this.displayScoresText(i, scores[i]));
+      scoresToDisplay.push(this.displayText(i, scores[i]));
     }
 
     return scoresToDisplay;
   }
 
-  displayScoresText = (i, score) => <Text key={i} style={styles.scoreText}>Place {i+1}: {score}</Text>
+  displayText = (i, score) => <Text key={i} style={styles.scoreText}>Place {i+1}: {score}</Text> // add text style to display scores on screen
 
 }
 
@@ -67,7 +66,7 @@ const styles = StyleSheet.create({
   highScoreBtn: {
     marginTop: 50,
     width: 150,
-    backgroundColor: '#6602A3',
+    backgroundColor: '#DA6202',
     height: 60,
     borderRadius: 20,
     alignSelf: 'center',
