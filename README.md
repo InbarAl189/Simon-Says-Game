@@ -7,6 +7,7 @@
 - Current score (the current length of the active sequence). <br>
 - Top 10 High Scores.<br>
 
+Screenshot:
 
 [![Screenshot-2020-11-19-162347.png](https://i.postimg.cc/RZpsJ1dY/Screenshot-2020-11-19-162347.png)](https://postimg.cc/dhdmzyzR)
 
