@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 
-export default class HighScores extends Component { //leaders screen component
+export default class HighScores extends Component { 
 
   constructor(props) {
     super(props);
