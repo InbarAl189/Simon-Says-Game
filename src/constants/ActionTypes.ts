@@ -1,0 +1,6 @@
+export const INIT_LOCALE = 'INIT_LOCALE';
+export const GAME_STARTED = 'GAME_STARTED';
+export const GAME_STOPPED = 'GAME_STOPPED';
+export const SIMON_FINISHED = 'SIMON_FINISHED';
+export const ADD_SCORE = 'ADD_SCORE';
+export const ON_GAME_OVER_COMPLETED = 'ON_GAME_OVER_COMPLETED';

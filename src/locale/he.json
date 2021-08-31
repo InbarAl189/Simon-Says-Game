@@ -1,0 +1,22 @@
+{
+  "welcome": {
+    "title": "Welcome to Simon!",
+    "startGame": "Start Game",
+    "highScores": "High Scores"
+  },
+  "game": {
+    "score": "Current score",
+    "start": "Start",
+    "end": "End"
+  },
+  "highScores": {
+    "title": "High scores"
+  },
+  "gameOverPopup": {
+    "title": "Game Over!",
+    "messageHighScore": "Awesome game!\nCongrats, You've made the top 10!\nEnter your name:",
+    "messageNoHighScore": "Nice game...\nYou didn't make the top 10 :/\nMaybe next time!",
+    "yourName": "Your Name...",
+    "done": "Done"
+  }
+}
