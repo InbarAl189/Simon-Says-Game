@@ -1,62 +1,17 @@
-# :space_invader: React Native Template TypeScript
+# Simon Says Game
+## **React Native** application version of the game Simon Says using React Native CLI.
+ 
+ The app includes 3 screens including:
+ - Welcome screen. 
+ - Game screen with 4 colored playing buttons and Start/End button. <br>
+ - Current score (the current length of the active sequence). <br>
+ - High Scores screen with top 10 High Scores. <br>
 
-<p>
-  <a href="https://travis-ci.org/react-native-community/react-native-template-typescript">
-    <img alt="Build Status" src="https://img.shields.io/travis/react-native-community/react-native-template-typescript.svg" target="_blank" />
-  </a>
-  <a href="https://github.com/react-native-community/react-native-template-typescript#readme">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
-  </a>
-  <a href="https://github.com/react-native-community/react-native-template-typescript/graphs/commit-activity">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
-  </a>
-  <a href="https://github.com/react-native-community/react-native-template-typescript/blob/master/LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
-  </a>
-</p>
+Screenshot:
 
-> Clean and minimalist React Native template for a quick start with TypeScript.
+[![Simulator-Screen-Shot-i-Phone-12-Pro-Max-2021-08-31-at-09-22-19.png](https://i.postimg.cc/HWNW82bw/Simulator-Screen-Shot-i-Phone-12-Pro-Max-2021-08-31-at-09-22-19.png)](https://postimg.cc/0rp1L7Wj)
+[![Simulator-Screen-Shot-i-Phone-12-Pro-Max-2021-08-31-at-09-22-25.png](https://i.postimg.cc/cC7NzQ5H/Simulator-Screen-Shot-i-Phone-12-Pro-Max-2021-08-31-at-09-22-25.png)](https://postimg.cc/GTpN8sRw)
+[![Simulator-Screen-Shot-i-Phone-12-Pro-Max-2021-08-31-at-09-22-55.png](https://i.postimg.cc/Qddr6Kg8/Simulator-Screen-Shot-i-Phone-12-Pro-Max-2021-08-31-at-09-22-55.png)](https://postimg.cc/w7ZPMvbZ)
+[![Simulator-Screen-Shot-i-Phone-12-Pro-Max-2021-08-31-at-09-23-02.png](https://i.postimg.cc/8zXgxkwh/Simulator-Screen-Shot-i-Phone-12-Pro-Max-2021-08-31-at-09-23-02.png)](https://postimg.cc/K1TWM26z)
+[![Simulator-Screen-Shot-i-Phone-12-Pro-Max-2021-08-31-at-09-25-02.png](https://i.postimg.cc/MHSC1nK8/Simulator-Screen-Shot-i-Phone-12-Pro-Max-2021-08-31-at-09-25-02.png)](https://postimg.cc/Q9fY3xT6)
 
-## :star: Features
-
-- Elegant usage directly within the [React Native CLI](https://github.com/react-native-community/cli)
-- Consistent with the default React Native template
-- Minimal additional dependencies
-
-## :arrow_forward: Usage
-
-```sh
-npx react-native init MyApp --template react-native-template-typescript
-```
-
-### Usage with older versions of React Native
-
-#### e.g. `react-native@0.62.x`
-
-```sh
-npx react-native init MyApp --template react-native-template-typescript@6.4.*
-```
-
-See the below table to find out which version of the template to use.
-
-#### React Native <=> Template Version
-
-| React Native  	| Template  	|
-|---	            |---	        |
-| 0.63  	        | 6.5.*       |
-| 0.62  	        | 6.4.*       |
-| 0.61  	        | 6.3.*       |
-| 0.60  	        | 6.2.*       |
-
-### Note on the legacy CLI
-There seems to be quite some confusion about the legacy CLI. This template only works with the new CLI. Make sure you have uninstalled the legacy `react-native-cli` first (`npm uninstall -g react-native-cli`), for the below command to work. If you wish to not use `npx`, you can also install the new CLI globally (`npm i -g @react-native-community/cli` or `yarn global add @react-native-community/cli`).
-
-Further information can be found here: https://github.com/react-native-community/cli#about
-
-## :computer: Contributing
-
-Contributions are very welcome. Please check out the [contributing document](CONTRIBUTING.md).
-
-## :bookmark: License
-
-This project is [MIT](LICENSE) licensed.
